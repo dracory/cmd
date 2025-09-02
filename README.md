@@ -16,14 +16,6 @@ This project is dual-licensed under the following terms:
 
 ## Installation
 
-```
-go get github.com/dracory/base
-```
-
-Module: `github.com/dracory/cmd`
-
-## Install
-
 ```bash
 go get github.com/dracory/cmd@latest
 ```
@@ -94,7 +86,9 @@ m := cmd.ArgsToMap([]string{"--user=alice", "--force", "--count", "3"})
 
 ## Notes & limitations
 
-- `ExecLine`/`ExecLineSeparated` split the command by spaces using `strings.Split`. Quoted arguments and escaping are not handled. For complex invocations, prefer `Exec`/`ExecSeparated` and pass args explicitly.
+- `ExecLine`/`ExecLineSeparated` tokenize using `strings.Fields` (whitespace collapsed). No shell parsing is performed:
+  - Quotes/escaping/grouping are NOT supported.
+  - Use `Exec`/`ExecSeparated` with explicit args for non-trivial commands, or invoke a shell explicitly (e.g., `sh -c` or `powershell -Command`).
 - Commands run with the current process environment and working directory. No timeout is enforced.
 
 ## Testing

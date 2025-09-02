@@ -59,9 +59,9 @@ func ExecLine(cmd string) (string, error) {
 		return "", errors.New("a blank command")
 	}
 
-	cs := strings.Split(cmd, " ")
+	cs := strings.Fields(cmd)
 	if len(cs) == 0 {
-		return "", errors.New("invalid command format")
+		return "", errors.New("blank or whitespace-only command")
 	}
 
 	return Exec(cs[0], cs[1:]...)
@@ -83,9 +83,9 @@ func ExecLineSeparated(cmd string) (string, string, error) {
 		return "", "", errors.New("a blank command")
 	}
 
-	cs := strings.Split(cmd, " ")
+	cs := strings.Fields(cmd)
 	if len(cs) == 0 {
-		return "", "", errors.New("invalid command format")
+		return "", "", errors.New("blank or whitespace-only command")
 	}
 
 	return ExecSeparated(cs[0], cs[1:]...)
