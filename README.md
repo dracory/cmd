@@ -1,6 +1,24 @@
-# cmd
+# cmd <a href="https://gitpod.io/#https://github.com/dracory/cmd" style="float:right:"><img src="https://gitpod.io/button/open-in-gitpod.svg" alt="Open in Gitpod" loading="lazy"></a>
+
+[![Tests Status](https://github.com/dracory/cmd/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/dracory/cmd/actions/workflows/tests.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/dracory/cmd)](https://goreportcard.com/report/github.com/dracory/cmd)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/dracory/cmd)](https://pkg.go.dev/github.com/dracory/cmd)
 
 Small Go helpers for executing system commands and parsing CLI args.
+
+## License
+
+This project is dual-licensed under the following terms:
+
+- For non-commercial use, you may choose either the GNU Affero General Public License v3.0 (AGPLv3) _or_ a separate commercial license (see below). You can find a copy of the AGPLv3 at: https://www.gnu.org/licenses/agpl-3.0.txt
+
+- For commercial use, a separate commercial license is required. Commercial licenses are available for various use cases. Please contact me via my [contact page](https://lesichkov.co.uk/contact) to obtain a commercial license.
+
+## Installation
+
+```
+go get github.com/dracory/base
+```
 
 Module: `github.com/dracory/cmd`
 
@@ -9,8 +27,6 @@ Module: `github.com/dracory/cmd`
 ```bash
 go get github.com/dracory/cmd@latest
 ```
-
-Go version per `go.mod`: 1.24.5
 
 ## API
 
