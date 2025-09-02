@@ -6,7 +6,8 @@ import "strings"
 // supports filled (i.e. --user=12) and unfilled (i.e. --force) arguments
 func ArgsToMap(args []string) map[string]string {
 	kv := map[string]string{}
-	for i := 0; i < len(args); i++ {
+
+	for i := range args {
 		current := args[i]
 
 		if strings.HasPrefix(current, "--") {
@@ -27,5 +28,6 @@ func ArgsToMap(args []string) map[string]string {
 			}
 		}
 	}
+
 	return kv
 }
